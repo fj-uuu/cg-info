@@ -14,7 +14,7 @@ app.error(console.log);
 
 app.command('/imas-cg-info', async ({ ack, say }) => {
   ack();
-  say("頑張ります！！！"");
+  say("島村卯月、頑張ります！！！");
 });
 
 exports.slack = functions
