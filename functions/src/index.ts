@@ -12,9 +12,9 @@ const app = new App({
 });
 app.error(console.log);
 
-app.command('/hello', async ({ ack, say }) => {
+app.command('/imas-cg-info', async ({ ack, say }) => {
   ack();
-  say("Hello");
+  say("頑張ります！！！"");
 });
 
 exports.slack = functions
