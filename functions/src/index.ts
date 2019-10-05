@@ -1,5 +1,7 @@
 import * as functions from 'firebase-functions';
 import { App, ExpressReceiver } from '@slack/bolt';
+import { hello } from './hello';
+import { test } from './test';
 
 const config = functions.config();
 const expressReceiver = new ExpressReceiver({
@@ -14,7 +16,12 @@ app.error(console.log);
 
 app.command('/imas-cg-info', async ({ ack, say }) => {
   ack();
-  say("島村卯月、頑張ります！！！");
+  say(hello());
+});
+
+app.command('/imas-test', async ({ ack, say }) => {
+  ack();
+  say(test());
 });
 
 exports.slack = functions

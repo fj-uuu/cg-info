@@ -1,0 +1,1 @@
+export const hello = (): string => "島村卯月、頑張ります！！！"
